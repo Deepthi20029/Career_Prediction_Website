@@ -1,0 +1,46 @@
+{%extends 'users/userbase.html'%}
+{%block contents%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Machine Learning Results</h2>
+
+    <h3>Decision Tree Results</h3>
+    <table>
+        <tr>
+            <th>Accuracy [Decision Tree]</th>
+            <th>Entropy Accuracy [Decision Tree]</th>
+            <th>Accuracy [KNN] </th>
+        </tr>
+        <tr>
+            <td>{{ accuracy }}</td>
+            <td>{{ entropy_accuracy }}</td>
+            <td>{{ knn_accuracy }}</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+{%endblock%}
